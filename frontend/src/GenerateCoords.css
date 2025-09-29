@@ -1,0 +1,198 @@
+.map-container {
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.map-legend {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.map-legend h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  text-align: center;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.legend-marker {
+  font-size: 16px;
+}
+
+#coords-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#coords-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+  aspect-ratio: 1;
+  width: calc(100% / var(--grid-size, 5));
+  height: calc(100% / var(--grid-size, 5));
+  min-width: 80px;
+  min-height: 80px;
+  position: relative;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.coords-cell {
+  position: relative;
+}
+
+.coords-cell.has-orders {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border-color: #ffc107;
+}
+
+.coords-cell.has-drones {
+  background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+  border-color: #17a2b8;
+}
+
+.coords-cell.has-orders.has-drones {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  border-color: #28a745;
+}
+
+.cell-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 5px;
+}
+
+.coordinates {
+  font-size: 12px;
+  color: #666;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.orders-in-cell,
+.drones-in-cell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-marker,
+.drone-marker {
+  font-size: 16px;
+  padding: 2px;
+  border-radius: 4px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.order-marker:hover,
+.drone-marker:hover {
+  transform: scale(1.2);
+}
+
+.order-marker.priority-1 {
+  background: rgba(220, 53, 69, 0.2);
+  border: 1px solid #dc3545;
+}
+
+.order-marker.priority-2 {
+  background: rgba(255, 193, 7, 0.2);
+  border: 1px solid #ffc107;
+}
+
+.order-marker.priority-3 {
+  background: rgba(40, 167, 69, 0.2);
+  border: 1px solid #28a745;
+}
+
+.order-marker.status-assigned {
+  opacity: 0.7;
+  filter: grayscale(50%);
+}
+
+.order-marker.status-delivered {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+.drone-marker.status-idle {
+  background: rgba(40, 167, 69, 0.2);
+  border: 1px solid #28a745;
+}
+
+.drone-marker.status-flying {
+  background: rgba(255, 193, 7, 0.2);
+  border: 1px solid #ffc107;
+  animation: pulse 2s infinite;
+}
+
+.drone-marker.status-delivering {
+  background: rgba(23, 162, 184, 0.2);
+  border: 1px solid #17a2b8;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    padding: 10px;
+  }
+  
+  .legend-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #coords-table td {
+    min-width: 60px;
+    min-height: 60px;
+    padding: 4px;
+  }
+  
+  .coordinates {
+    font-size: 10px;
+  }
+  
+  .order-marker,
+  .drone-marker {
+    font-size: 14px;
+  }
+}
