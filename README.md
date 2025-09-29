@@ -123,6 +123,14 @@ npm run test:coverage
 
 ---
 
+## Prompts Utilizados
+
+#I'm doing a web project that simulates drone deliveries. I have a coordinates table and I need my drones to find the better path for delivery. I considered using A* Pathfinding, or there's a easier math equation way or something like that?`
+
+#I went with the euclidean distance, thanks. I need some help because my drone when having multiple packages allocated to it, only one package is being able to deliver.`
+
+`📎 Function Drones()`
+
 ## Licença
 
 MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes.
