@@ -7,7 +7,7 @@ Sistema completo de **simulação de entregas com drones**, composto por:
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 .
@@ -27,7 +27,7 @@ Sistema completo de **simulação de entregas com drones**, composto por:
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 ### Backend
 
@@ -116,7 +116,7 @@ Exemplo de endpoints:
 ---
 
 
-## 🧪 Testes (backend)
+## Testes (backend)
 
 ```bash
 cd backend
@@ -126,6 +126,6 @@ npm run test:coverage
 
 ---
 
-## 📄 Licença
+## Licença
 
 MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes.
