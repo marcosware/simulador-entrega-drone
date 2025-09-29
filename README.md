@@ -36,16 +36,13 @@ Sistema completo de **simulação de entregas com drones**, composto por:
 * **Entregas**: Criação, rastreamento e estatísticas
 * **Rotas**: Otimização automática de trajetos
 * **Fila**: Algoritmo de priorização inteligente
-* **Segurança**: Helmet, CORS, rate limiting
-* **Monitoramento**: Health check e métricas
 
 ### Frontend
 
 * Dashboard com **visualização dos pedidos e drones**
 * **Algoritmo de alocação** para distribuir pedidos automaticamente
 * Logs detalhados das alocações
-* Estatísticas e indicadores em tempo real
-* UI responsiva e moderna (React + Vite)
+* Interface responsiva (React + Vite)
 
 ---
 
@@ -63,8 +60,8 @@ Você precisa do seguinte instalado na sua máquina de desenvolvimento:
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-repo/simulador-drones.git
-cd simulador-drones
+git clone https://github.com/marcosware/simulador-entrega-drone.git
+cd simulador-entrega-drone
 ```
 
 ### 2. Inicie o backend
